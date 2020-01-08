@@ -89,7 +89,7 @@ header {margin-bottom: 50px;}
 h1 {margin-bottom: 8px;}
 p {margin: 0px;}
 .center {text-align: center;}
-.hide {display: none;}
+.hide {display: none !important; }
 
 
 
@@ -203,4 +203,25 @@ a
   {
     font-size: 16px;
   }
+}
+
+
+.spinner {
+	display: block;
+	width: 34px;
+	height: 34px;
+	position: relative;
+	top: 8px;
+	left: calc(50% - 17px);
+	background: transparent;
+	box-sizing: border-box;
+	border-top: 4px solid white;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-radius: 100%;
+	animation: spin 0.6s ease-out infinite;
+}
+@keyframes spin {
+	100% {transform: rotate(360deg)}
 }
