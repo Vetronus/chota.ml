@@ -1,3 +1,4 @@
+/* Background color */
 body {
 	margin: 0;
 	width: 100%;
@@ -8,7 +9,6 @@ body {
 	background-size: 400% 400%;
 	animation: gradientBG 15s ease infinite;
 }
-
 @keyframes gradientBG {
 	0% {
 		background-position: 0% 50%;
@@ -21,61 +21,80 @@ body {
 	}
 }
 
-input:focus {
-  outline:0;
-  width: 300px;
-  background-color: white;
-}
-button:focus
-{
-  outline: none;
-}
 
-button:hover{
-  background-color: rgba(36, 36, 36, 0.8);
-}
 
+
+/* Placeholders */
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(0, 0, 0, 0.5);
   opacity: 1; /* Firefox */
   margin-right: 100px;
 }
-
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(0, 0, 0, 0.7);
-}
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 100px;
 
+}
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 100px;
 }
 
-header
+
+
+
+/* Focus and hover */
+input:focus {
+  outline:0;
+  width: 300px;
+  background-color: white;
+}
+input:hover
 {
-  margin-bottom: 50px;
+  width: 300px;
 }
-
-h1
+button:focus
 {
-  margin-bottom: 10px;
+  outline: none;
+  /* background-color: rgba(36, 36, 36, 0.8); */
 }
-
-div
+button:hover{
+  background-color: rgba(36, 36, 36, 0.8);
+}
+button:active {
+  background-color: rgba(36, 36, 36, 1);
+}
+a:focus
 {
-  width: 360px;
-  margin-left: auto;
-  margin-right: auto;
+  outline: none;
+  /* background-color: rgba(256, 256, 256, 0.7); */
 }
-
-p
+a:hover
 {
-  margin: 0px;
+  outline: none;
+  background-color: rgba(256, 256, 256, 0.7);
 }
-
-.center
+a:active
 {
-  text-align: center;
+  outline: none;
+  background-color: rgba(256, 256, 256, 1);
 }
 
+
+
+
+/* Header */
+a {text-decoration: none !important;}
+header {margin-bottom: 50px;}
+h1 {margin-bottom: 8px;}
+p {margin: 0px;}
+.center {text-align: center;}
+.hide {display: none;}
+
+
+
+
+/* vertical center */
 .outer {
   display: table;
   position: absolute;
@@ -84,18 +103,19 @@ p
   height: 100%;
   width: 100%;
 }
-
 .middle {
   display: table-cell;
   vertical-align: middle;
 }
-
 .inner {
   margin-left: auto;
   margin-right: auto;
   width: 400px;
   /*whatever width you want*/
 }
+
+
+
 
 button
 {
@@ -108,13 +128,16 @@ button
   background-color: rgba(36, 36, 36, 0.5);
   border-radius: 100px;
   color: white;
+  cursor: pointer;
 }
+
+
+
 
 input
 {
   width: 270px;
   padding: 10px 15px;
-  min-width: 100px;
   font-size: 18px;
   margin: 10px 0px;
   border: none;
@@ -122,4 +145,62 @@ input
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
   color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+a
+{
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  /* border: rgba(255, 255, 255, 0.5) 1px solid; */
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  color: rgba(0, 0, 0, 0.7);
+}
+#short-a
+{
+  max-width: 100px;
+  color: white;
+  /* border: rgba(255, 255, 255, 0.5) 2px solid; */
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.3);;
+}
+#copy-btn
+{
+  /* color: white; */
+  /* border: rgba(255, 255, 255, 0.5) 2px solid; */
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  margin-left: -6px;
+  /* background-color: rgba(0, 0, 0, 0.3);; */
+  font-weight: bold;
+}
+
+
+@media only screen and (max-width: 450px)
+{
+  input
+  {
+    width: 200px;
+  }
+  input:focus, input:hover
+  {
+    width: 230px;
+  }
+  button
+  {
+    width: 230px;
+  }
+  .inner
+  {
+    width: 300px;
+  }
+
+  a
+  {
+    font-size: 16px;
+  }
 }

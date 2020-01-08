@@ -1,2 +1,2 @@
-// console.log("What");
-var h1 = 10;
+console.log("What");
+// var h1 = 10;

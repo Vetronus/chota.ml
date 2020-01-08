@@ -5,29 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./index.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-	<title>Chota URL</title>
+	<script src="./index.js"></script>
+	<title>A modern URL shortener.</title>
 </head>
 <body>
-<header>
-	<h1> <center> Chota.ml </center></h1>
+<header class="center">
+	<h1>Chota.ml</h1>
 	<div>
-		<p>Convert your lengthy URLs into super short ones that never expire. We never show ads.</p>
+		<p>A clean URL shortener.</p>
 	</div>
 </header>
+
 <div id="inputDiv" class="center outer">     
     <div class="middle">
 		<div class="inner">
-			<input type="text" placeholder="Enter The URL..."  required >
-			<br><button>Get Chota URL</button>
+			<input type="text" placeholder="Enter The URL..." id="url-input">
+			<br><button id="get-url-btn">Get Chota URL</button>
+			<div style="height: 30px;"></div>
+			<div id="output-div"><a id="short-a">https://chota.ml/739</a> <a id="copy-btn" href="#">Copy</a></div>
 		</div>
 	</div>
 </div>
 
-<div id="outputDiv" style="display: none">
-	<input type="text" name="url-output" readonly value="https://aroxbit.com/4587667">
-	<br><button>Copy Chota URL</button>
-</div>
 </body>
 </html>
-
-<script src="./index.js"></script>
