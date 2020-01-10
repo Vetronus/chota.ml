@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Redirecting</title>
 </head>
 <body>
-    Hi there!
+    Please Be Patient. We are redirecting you...
 </body>
 </html>
 
 <script>
-console.log(window.location.href);
+short = window.location.href.split('/', 4)[3];
+console.log(short);
+// window.location.href = "https://chotaapi.herokuapp.com/api/link/"+short; 
 </script>
