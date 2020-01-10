@@ -1,5 +1,5 @@
 _api = 'https://chotaapi.herokuapp.com/api/link/';
-let short = ""; let url = ""; let final = "https://chota.ml/#";
+let short = ""; let url = ""; let final = "https://chota.ml/";
 ajad("GET", "ping/it", {}, function(obj){});
 
 short = window.location.href.split('#', 2)[1];
