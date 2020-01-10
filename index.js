@@ -15,6 +15,7 @@ let copyBtn = document.getElementById("copy-btn");
 let spinSpan = document.getElementById("spin-span");
 let outputDiv = document.getElementById("output-div");
 let db = document.getElementById("db");
+let errSpan = document.getElementById('err-span');
 
 
 getUrlBtn.addEventListener("mousedown", createShortUrl);
@@ -31,10 +32,11 @@ function createShortUrl()
     url = urlInput.value;
     if(!isValidURL(url))
     {
-        alert("Not a valid url");
+        errSpan.classList.remove('hide');
         return;
     }
 
+    errSpan.classList.add('hide');
     outputDiv.classList.add("hide");
     spinSpan.classList.remove("hide");
     
